@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="er">
+<head>
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.rtl.min.css" integrity="sha384-+4j30LffJ4tgIMrq9CwHvn0NjEvmuDCOfk6Rpg2xg7zgOxWWtLtozDEEVvBPgHqE" crossorigin="anonymous">
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+  <title>Prediction</title>
+</head>
+<body>
+  <section class="text-black-600 body-font">
+    <div class="container px-5 py-24 mx-auto">
+      <div class="flex flex-col text-center w-full mb-20">
+        
+        <h1 class="sm:text-5xl text-2xl font-medium title-font mb-4 text-gray-2000">Loan Prediction</h1>
+        <p class="lg:w-2/3 mx-auto leading-relaxed text-base">fill the form for prediction</p>
+        
+      </div>
+      
+      <div class="flex flex-wrap">
+        <div class="col-12">
+          <form  method='POST'>
+            <div class="mb-3">
+              <label for="exampleFormControlInput1" class="form-label">Gender</label>
+              <select name="gender" class="form-select" aria-label="Default select example">
+                <option selected>--Select Gender--</option>
+                <option value="1">Male</option>
+                <option value="2">Female</option>
+                <option value="3">Other</option>
+              </select>
+            </div>
+            <div class="mb-3">
+              <label for="exampleFormControlInput1" class="form-label">Married_Status</label>
+              <select name="Married_Status" class="form-select" aria-label="Default select example">
+                <option selected>--Select Married_Status--</option>
+                <option value="1">Yes</option>
+                <option value="2">No</option>
+              </select>
+            </div>
+            <div class="mb-3">
+              <label for="exampleFormControlInput1" class="form-label">Dependents</label>
+              <select name="Dependents" class="form-select" aria-label="Default select example">
+                <option selected>-- Select Dependents--</option>
+                <option value="1">0</option>
+                <option value="2">1</option>
+                <option value="3">2</option>
+                <option value="4">3+</option>
+              </select>
+            </div>
+            <div class="mb-3">
+              <label for="exampleFormControlInput1" class="form-label">Education</label>
+              <select name="Eduaction" class="form-select" aria-label="Default select example">
+                <option selected>--Select Eduaction--</option>
+                <option value="1">Educate</option>
+                <option value="2">Not Educate</option>
+              </select>
+            </div>
+            <div class="mb-3">
+              <label for="exampleFormControlInput1" class="form-label">Self_Employed</label>
+              <select name="Self_Employed" class="form-select" aria-label="Default select example">
+                <option selected>--Select Self_Employed--</option>
+                <option value="1">Yes</option>
+                <option value="2">No</option>
+              </select>
+            </div>
+            <div class="mb-3">
+              <label for="exampleFormControlInput1" class="form-label">Credit_History</label>
+              <select name="Credit_History" class="form-select" aria-label="Default select example">
+                <option selected>--Select Credit_History--</option>
+                <option value="1">1.0</option>
+                <option value="2">0</option>
+              </select>
+            </div>
+            <div class="mb-3">
+              <label for="exampleFormControlInput1" class="form-label">Property_Area</label>
+              <select name="Property_Area" class="form-select" aria-label="Default select example">
+                <option selected>--Select Property_Area--</option>
+                <option value="1">Urban</option>
+                <option value="2">Rural</option>
+                <option value="3">SemiUrban</option>
+              </select>
+            </div>
+            <div class="mb-3">
+              <label for="exampleFormControlInput1" class="form-label">Loan_Status</label>
+              <select name="Loan_Status" class="form-select" aria-label="Default select example">
+                <option selected>--Select Loan_Status--</option>
+                <option value="1">Y</option>
+                <option value="2">N</option>
+              </select>
+            </div>
+            <div class="mb-3">
+              <label for="exampleFormControlInput1" class="form-label">Enter ApplicantIncome</label>
+              <input name="ApplicantIncome" type="ApplicantIncome" class="form-control" id="exampleFormControlInput1">
+            </div>
+            <div class="mb-3">
+              <label for="exampleFormControlInput1" class="form-label">Enter CoapplicantIncome</label>
+              <input name="CoapplicantIncome" type="CoapplicantIncome" class="form-control" id="exampleFormControlInput1">
+            </div>
+            <div class="mb-3">
+              <label for="exampleFormControlInput1" class="form-label">Enter LoanAmount</label>
+              <input name="LoanAmount" type="LoanAmount" class="form-control" id="exampleFormControlInput1">
+            </div>
+            <div class="mb-3">
+              <label for="exampleFormControlInput1" class="form-label">Enter Loan_Amount_Term</label>
+              <input name="Loan_Amount_Term" type="Loan_Amount_Term" class="form-control" id="exampleFormControlInput1">
+            </div>
+            <br><br><h3><b>{{prediction_text}}</b></h3>
+            <button class="flex mx-auto mt-16 text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">Predict</button>
+      
+          </form>
+        </div>
+      </div>
+    </section>
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+    
+    
+  </body>
+  </html>
