@@ -17,9 +17,8 @@ def predict():
         dependents = request.form['dependents']
         eduaction = request.form['eduaction']
         self_employed = request.form['self_employed']
-        credit_history = float(request.form['credit_history'])
+        credit_history = request.form['credit_history']
         property_area = request.form['property_area']
-        loan_status = request.form['loan_status']
         ApplicantIncome = float(request.form['ApplicantIncome'])
         CoapplicantIncome = float(request.form['CoapplicantIncome'])
         LoanAmount = float(request.form['LoanAmount'])
@@ -77,12 +76,6 @@ def predict():
         else:
             semiurban = 0
             urban = 0
-
-        # loan_status
-        if (loan_status == "Y"):
-            loan_status_Y = 1
-        else:
-            loan_status_N = 0
 
         ApplicantIncomeLog = np.log(ApplicantIncome)
         TotalIncomeLog = np.log(ApplicantIncome+CoapplicantIncome)
